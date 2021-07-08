@@ -21,6 +21,7 @@ export const DataProvider = props => {
                 _id: 1,
                 text: 'Come to know this awesome tool. \n\nUnsplansh is widely used and most populars among the photographers.The largest collection of opensorce images',
                 category: 'Resource',
+                topic: 'Images',
                 tool: {
                     image: 'https://unsplash.com/apple-touch-icon.png',
                     text: 'Unsplash - Largest library of stock photos and videos',
@@ -31,13 +32,15 @@ export const DataProvider = props => {
             },
             {
                 _id: 2,
-                category: 'Fact',
+                category: 'Reads',
+                topic: 'Self Development',
                 text: 'Give the world what it needs, world will give you what you want',
                 time: '2021-06-17T06:05:16.174+00:00'
             },
             {
                 _id: 3,
                 category: 'Image',
+                topic: 'Memes',
                 text: "Images too! Gonna have lots of fun in the advanture.",
                 image: 'https://i.imgur.com/2SeqEsk.jpg',
                 time: '2021-06-17T06:07:15.284+00:00'
@@ -45,14 +48,16 @@ export const DataProvider = props => {
             {
                 _id: 4,
                 category: 'GIF',
+                topic: 'Memes',
                 text: "Yeasss you're right! GIFs too! We gonna take it to the another level 🚀.",
                 image: 'https://media.giphy.com/media/XUojAIMYIIOQ9tpx2s/giphy.gif',
                 time: '2021-06-17T06:07:15.284+00:00'
             },
             {
                 _id: 5,
-                category: 'News',
+                category: 'Article',
                 text: "Checkout the firstlook of all new Windows 11's UI",
+                topic: 'Windows',
                 linkSource: {
                     image: 'https://cdn.vox-cdn.com/thumbor/Nby7h13fKy3zH2AR9_1tJhZbBCM=/0x189:2639x1571/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22660842/windows11.jpg',
                     link: 'https://www.theverge.com/2021/6/15/22535123/microsoft-windows-11-leak-screenshots-start-menu',
@@ -64,13 +69,34 @@ export const DataProvider = props => {
             {
                 _id: 6,
                 category: 'Tweet',
+                topic: 'New',
                 text: 'This is tweet\n derived from da embeded tweet function',
                 time: '2021-06-21T12:47:55.056+00:00'
             },
             {
                 _id: 7,
-                category: 'Tweet',
-                text: 'This is tweet derived from da embeded tweet function',
+                category: 'Unsplash',
+                topic: 'Travel',
+                text: 'Really good thing to see',
+                source: 'https://codeonec.studio',
+                image: 'https://images.unsplash.com/photo-1606512070489-d3cf0444a3fa?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8RnpvM3p1T0hONnd8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                time: '2021-06-21T12:47:55.056+00:00'
+            },
+            {
+                _id: 8,
+                category: 'Reddit',
+                topic: 'Env',
+                source: 'https://codeonec.studio',
+                text: 'Really good sub reddit',
+                time: '2021-06-21T12:47:55.056+00:00'
+            },
+            {
+                _id: 9,
+                category: 'Instagram',
+                topic: 'Beauty',
+                source: 'https://codeonec.studio',
+                text: 'Beauty in paradise.\n Great',
+                image: 'https://images.unsplash.com/photo-1589673644418-f8cb57a01d3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=80',
                 time: '2021-06-21T12:47:55.056+00:00'
             }
         ])        

@@ -31,7 +31,7 @@
     --text-3: #f0f6f3;
     --text-4: #a8b3cf;
     --border-1: #cfd9de;
-    --border-2: #e1e5ec;
+    --border-2: #e5eaf1;
     // --blue-bg: #0366d6;
     --blue-bg: #007aff;
     // --blue-text: #0366d6;
@@ -405,21 +405,60 @@ body{
         .post-card{
             background: var(--background-2);
             margin-bottom: 24px;
-            padding: 14px 0;
+            padding: 0;
             border-radius: 15px;
-            box-shadow: 0 0 0 1px var(--border-2);
+            box-shadow: 0 0 0 1px var(--border-1);
             box-sizing: border-box;
             // box-shadow: 0 0 0 1px var(--border-1),var(--box-shadow-card);
             // border: 1px solid (var(--border-1));
             position: relative;
-            .category-label{
-                font-size: 13px;
-                color: var(--blue-text);
-                margin-bottom: 8px;
-                font-weight: 600;
-                padding: 0 16px;
-                // text-transform: uppercase;
-                // letter-spacing: 0.08em;
+            .feed-element-header{
+                margin-bottom: 12px;
+                padding: 12px 16px;
+                display: flex;
+                align-items: center;
+                box-shadow: 0 1px 0 0 var(--border-2);
+                .category-label{
+                    font-size: 13px;
+                    color: var(--text-1);
+                    font-weight: 600;   
+                }
+                .topic-label{
+                    font-size: 13px;
+                    color: var(--text-2);
+                    span{
+                        font-weight: 600;
+                        color: var(--text-1);
+                    }
+                }
+                .category-ico{
+                    // box-shadow: 0 0 0 1px var(--border-2);
+                    line-height: 0;
+                    margin-right: 6px;
+                    // border-radius: 50%;
+                    // padding: 8px;
+                    // background: #fefefe;
+                    img{
+                        height: 18px;
+                    }
+                }
+                .header-source-lnk{
+                    line-height: 0;
+                    margin-left: auto;
+                    padding: 7px;
+                    border-radius: 7px;
+                    margin-top: -7px;
+                    margin-bottom: -7px;
+                    margin-right: -7px;
+                    transition: 0.35s;
+                    svg{
+                        fill: var(--text-2);
+                    }
+                    &:hover{
+                        background: var(--selection-color);
+                        svg{fill: var(--blue-text);}
+                    }
+                }
             }
             .post-body{
                 font-size: 15px;
@@ -430,11 +469,11 @@ body{
             }
             .img-container{
                 width: 100%;
-                margin-bottom: 12px;
+                // margin-bottom: 12px;
                 overflow: hidden;
                 // box-shadow: 0 0 0 1px var(--border-2);
                 border-top: 1px solid var(--border-2);
-                border-bottom: 1px solid var(--border-2);
+                // border-bottom: 1px solid var(--border-2);
                 line-height: 0;
                 // border-radius: 15px;
                 img{
@@ -546,30 +585,32 @@ body{
                 }
             }
             .card-footer{
-                padding: 0 16px;
+                padding: 12px 16px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                box-shadow: 0 -1px 0 0 var(--border-2);
                 .post-time{
                     font-size: 13px;
                     color: var(--text-2);
                 }
                 .save-btn{
                     border: 0;
-                    padding: 7px 9px;
+                    padding: 7px;
+                    margin: -7px -7px -7px 0;
                     line-height: 0;
                     background: transparent;
                     border-radius: 7px;
                     transition: 0.4s;
                     cursor: pointer;
-                    box-shadow: 0 0 0 1px var(--border-1);
+                    // box-shadow: 0 0 0 1px var(--border-1);
                     transition-property: background color;
                     svg{
                         fill: var(--text-2);
                         transition: 0.4s;
                     }
                     &:hover{
-                        background: var(--background-1);
+                        background: var(--selection-color);
                         svg{
                             fill: var(--blue-text);
                         }
@@ -577,33 +618,33 @@ body{
                 }
                 .delete-btn{
                     border: 0;
-                    padding: 7px 9px;
+                    padding: 5px;
+                    margin: -5px -5px -5px 0;
                     line-height: 0;
-                    background: var(--green-bg);
                     border-radius: 7px;
                     transition: 0.4s;
                     cursor: pointer;
-                    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+                    background: var(--selection-color);
                     svg{
-                        fill: #fefefe;
+                        fill: var(--green-text);
                         transition: 0.4s;
                     }
                 }
                 .delete-btn-2{
                     border: 0;
-                    padding: 7px 9px;
+                    padding: 7px;
+                    margin: -7px -7px -7px 0;
                     line-height: 0;
                     background: transparent;
                     border-radius: 7px;
                     transition: 0.4s;
                     cursor: pointer;
-                    box-shadow: 0 0 0 1px var(--border-1);
                     svg{
                         fill: var(--red-text);
                         transition: 0.4s;
                     }
                     &:hover{
-                        background: var(--background-1);
+                        background: var(--selection-color);
                     }
                 }
             }

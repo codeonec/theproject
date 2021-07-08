@@ -1,5 +1,13 @@
 import { useState, useMemo,useEffect } from "react";
 import {getCollection,saveCollection} from './indexeddb'
+import UnsplashIco from './assets/unsplash_ico.svg'
+import IGIco from './assets/ig_ico.svg'
+import RedditIco from './assets/reddit_ico.svg'
+import TWIco from './assets/tw_ico.svg'
+import ReadsIco from './assets/reads_ico.svg'
+import ResourceIco from './assets/resource_ico.svg'
+import ArticleIco from './assets/article_ico.svg'
+import ImageIco from './assets/image_ico.svg'
 
 const FeedElement = ({ obj, del, savedKeys, SaveCard, DeleteCard }) => {
 
@@ -121,7 +129,21 @@ const FeedElement = ({ obj, del, savedKeys, SaveCard, DeleteCard }) => {
 
     return (
         <div className='post-card' key={obj._id}>
-            <div className="category-label">{obj.category}</div>
+            <div className="feed-element-header">
+                {obj.category === 'Tweet' && <div className='category-ico'><img src={TWIco} alt='TW'/></div>}
+                {obj.category === 'Unsplash' && <div className='category-ico'><img src={UnsplashIco} alt='US'/></div>}
+                {obj.category === 'Instagram' && <div className='category-ico'><img src={IGIco} alt='IG'/></div>}
+                {obj.category === 'Reddit' && <div className='category-ico'><img src={RedditIco} alt='RD'/></div>}
+                {obj.category === 'Reads' && <div className='category-ico'><img src={ReadsIco} alt='RE'/></div>}
+                {obj.category === 'Resource' && <div className='category-ico'><img src={ResourceIco} alt='RS'/></div>}
+                {obj.category === 'Article' && <div className='category-ico'><img src={ArticleIco} alt='AR'/></div>}
+                {obj.category === 'Image' && <div className='category-ico'><img src={ImageIco} alt='IMG'/></div>}
+                <div className="category-label">
+                    {obj.category}
+                </div>                
+                {obj.topic && <div className="topic-label">&nbsp;in <span>{obj.topic}</span></div>}
+                {obj.source && <a className='header-source-lnk' href={obj.source} target='_blank' rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z"></path><path d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z"></path></svg></a>}
+            </div>
             <div className="post-body" dangerouslySetInnerHTML={{ __html: obj.text.replaceAll('\n', '<br/>') }}></div>
             {obj.image &&
                 <div className="img-container">
@@ -155,16 +177,16 @@ const FeedElement = ({ obj, del, savedKeys, SaveCard, DeleteCard }) => {
                 <div className="post-time">{ParseDate(obj.time)}</div>
                 {del ?
                     <button className="delete-btn-2" onClick={() => { DeleteCard(obj._id) }}>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fillRule="evenodd" d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fillRule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
                     </button> :
 
                     savedKeys.includes(obj._id) ?
                         <button className="delete-btn" onClick={() => { DeleteCard(obj._id) }}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fillRule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18"><path fillRule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>
                         </button>
                         :
                         <button className="save-btn" onClick={ () => { setPopover(val => !val); }}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fillRule="evenodd" d="M7.75 2a.75.75 0 01.75.75V7h4.25a.75.75 0 110 1.5H8.5v4.25a.75.75 0 11-1.5 0V8.5H2.75a.75.75 0 010-1.5H7V2.75A.75.75 0 017.75 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18"><path fillRule="evenodd" d="M7.75 2a.75.75 0 01.75.75V7h4.25a.75.75 0 110 1.5H8.5v4.25a.75.75 0 11-1.5 0V8.5H2.75a.75.75 0 010-1.5H7V2.75A.75.75 0 017.75 2z"></path></svg>
                         </button>
 
                 }

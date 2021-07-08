@@ -3,7 +3,7 @@ import Dexie from "dexie";
 export const IdbInit = () => {
     const db = new Dexie("localDB")
     db.version(1).stores({
-        saved: "_id, text, image, linkSource, category, tool, time, c_id",
+        saved: "_id, text, image, linkSource, source, topic, category, tool, time, c_id",
         collections: "++_id, name, icon"
     });
     return db
