@@ -1,7 +1,7 @@
 
 <div class="submission-wrapper">
     <h2 class="head">Add the Kick</h2>
-    <form action="/kickdata" id="form-sub" method="POST">
+    <form action="/kickdata" class="form-sub" id="form-sub" method="POST">
         <label>Category<span>*</span></label>
         <select class="form-select flex-grow-0 w-auto" onchange="getFormElements()" data-category>
             <option class="default" selected>Select Category</option>
@@ -10,11 +10,12 @@
             <option value="GIF">GIF</option>
             <option value="News">News</option>
             <option value="Tweet">Tweet</option>
-            <option value="Hack">Hack</option>
+            <option value="Reads">Reads</option>
             <option value="Meme">Meme</option>
-            <option value="Quote">Quote</option>
             <option value="Article">Article</option>
-            <option value="Fact">Fact</option>
+            <option value="Reddit">Reddit</option>
+            <option value="Unsplash">Unsplash</option>
+            <option value="Instagram">Instagram</option>
         </select>
         <label>Topic<span>*</span></label>
         <input type="text" name="topic" placeholder="Enter Kick Topic" autocomplete="off"  data-topic>

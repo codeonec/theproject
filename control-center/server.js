@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const cookieParser = require('cookie-parser')
 const exphbs = require('express-handlebars')
 const ensureAuth = require('./middleware/auth').ensureAuth
 const mongoose = require('mongoose');
@@ -11,8 +12,9 @@ app.use(cors())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json());
 
+app.use(cookieParser())
+
 const db_uri = require('./config/keys').MongoURI;
-const router = require('./routes/index');
 
 mongoose.connect(db_uri, { useNewUrlParser: true , useUnifiedTopology: true }, ()=>{
     console.log('DB connected successfully');
@@ -31,6 +33,10 @@ app.get('/', ensureAuth,(req,res)=>{
 
 app.use('/kickdata', require('./routes/kick'))
 app.use('/api', require('./routes/index'));
+app.use('/login',require('./routes/login'))
+app.get('/logout', ensureAuth, (req,res)=>{
+    res.cookie('token',null,{maxAge: 0}).redirect('/login')
+})
 
 
 // app.listen(process.env.PORT || 5000);

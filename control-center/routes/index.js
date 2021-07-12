@@ -14,21 +14,21 @@ router.get('/getdata/:load/:limit', async (req,res)=>{
 
     const resultData = {}
 
-    let docLength 
-
-    if(req.query.prefs){
-        docLength = await Kick.countDocuments({topic: {$in: req.query.prefs}})
-    }else{
-        docLength = await Kick.countDocuments()
-    }
+    const AltDocLen = await Kick.countDocuments({topic: {$in: req.query.prefs}})
+    const docLength = await Kick.countDocuments()
 
     if(endIndex < docLength){
         resultData.next = {
             load: load + 1,
             limit: limit
         }
+    }else if(endIndex > docLength && Math.ceil(AltDocLen/limit)===load){
+        resultData.next = {
+            load: load + 1,
+            limit: limit
+        }
+        console.log('alt worked')
     }
-
     if(startIndex > 0){
         resultData.previous = {
             load: load - 1,
@@ -37,13 +37,23 @@ router.get('/getdata/:load/:limit', async (req,res)=>{
     }    
 
     try{
-        if(req.query.prefs){
-            resultData.data = await Kick.find({topic: {$in: req.query.prefs}}).sort({ time: -1 }).skip(startIndex).limit(limit)
-            res.send(resultData)
+
+        if(req.query.prefs){            
+            if(load*limit > AltDocLen && load>1){
+                const nextLoad = load - (AltDocLen/limit)
+                const nextStartIndex = (Math.floor(nextLoad) - 1) * limit
+                resultData.data = await Kick.find({topic: {$nin: req.query.prefs}}).sort({ time: -1 }).skip(nextStartIndex).limit(limit)
+                res.send(resultData)
+            }else{
+                resultData.data = await Kick.find({topic: {$in: req.query.prefs}}).sort({ time: -1 }).skip(startIndex).limit(limit)
+                res.send(resultData)
+            }
+            
         }else{
             resultData.data = await Kick.find().sort({ time: -1 }).skip(startIndex).limit(limit)
             res.send(resultData)
         }        
+
     }catch(e){
        res.status(400).send(e)
     }

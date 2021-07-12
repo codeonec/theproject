@@ -4,7 +4,7 @@ const kickSchema  = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ['Resource', 'Image', 'GIF', 'News', 'Tweet', 'Hack', 'Meme', 'Quote', 'Article', 'Fact']
+        enum: ['Resource', 'Image', 'GIF', 'News', 'Tweet', 'Reads', 'Meme', 'Article', 'Reddit', 'Unsplash', 'Instagram']
     },
     text: {
         type: String,
@@ -13,6 +13,9 @@ const kickSchema  = new mongoose.Schema({
     topic: {
         type: String,
         required: true
+    },
+    source: {
+        type: String
     },
     tool:{
         image: {type: String},

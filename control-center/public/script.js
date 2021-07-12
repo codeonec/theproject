@@ -12,8 +12,11 @@ submitForm.addEventListener('submit', async e => {
 
     const category = document.querySelector('[data-category]').value
     
-    if(category === 'Image' || category === 'GIF' || category==='Tweet' || category==='Meme'){
+    if(category === 'Image' || category ==='GIF' || category ==='Tweet' || category ==='Meme' || category ==='Unsplash' || category ==='Reddit' || category ==='Instagram' || category ==='Reads'){
         reqBody.image = document.querySelector('[data-image]').value
+        if(document.querySelector('[data-source]').value !== "" ){
+            reqBody.source = document.querySelector('[data-source]').value
+        }
     }
     if(category === 'Resource'){
         reqBody.tool =  {
@@ -23,7 +26,7 @@ submitForm.addEventListener('submit', async e => {
             linkPreview: document.querySelector('[data-link-resource-linkPreview]').value
         }
     }
-    if(category === 'News' || category === 'Article'){
+    if(category ==='News' || category ==='Article'){
         reqBody.linkSource = {
             image: document.querySelector('[data-link-image]').value,
             text: document.querySelector('[data-link-text]').value,
@@ -44,6 +47,7 @@ submitForm.addEventListener('submit', async e => {
         const errors = e.response.data.errors
         appendErrors(errors)
     }
+    // console.log(reqBody)
 
 })
 
@@ -78,8 +82,11 @@ const appendErrors = (dataError) => {
 const getFormElements = () => {
     const value = document.querySelector('[data-category]').value
     document.querySelector('.ext-elements').innerHTML = ""
-    if(value === 'Image' || value === 'GIF' || value==='Tweet' || value==='Meme'){
-        document.querySelector('.ext-elements').innerHTML = "<input type='text' name='image' placeholder='Enter Image URL' data-image>"
+    if(value === 'Image' || value === 'GIF' || value === 'Tweet' || value === 'Meme' || value === 'Unsplash' || value === 'Reddit' || value === 'Instagram' || value === 'Reads'){
+        document.querySelector('.ext-elements').innerHTML = `
+            <input type='text' name='image' placeholder='Enter Image URL' data-image>
+            <input type='text' name='source' placeholder='Enter Source Link (If any)' data-source>
+            `
     }
     if(value === 'Resource'){
         document.querySelector('.ext-elements').innerHTML = `
