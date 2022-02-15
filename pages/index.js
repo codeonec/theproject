@@ -10,6 +10,7 @@ export default function Home() {
         <meta name="description" content="UPRISE.COM" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>Hello</h1>
     </div>
   );
 }
