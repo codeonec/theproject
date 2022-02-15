@@ -13,10 +13,14 @@ export default function Home() {
         <meta property="og:title" content="Uprise. Funding next big thing" />
         <meta property="og:type" content="website" />
         {/* <meta property="og:image" itemprop="image" content="./"/> */}
-        <meta property="og:description" content="invest in startups from all segments or participate by being an early employee" />
+        <meta
+          property="og:description"
+          content="invest in startups from all segments or participate by being an early employee"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Hello</h1>
+      <Home />
     </div>
   );
 }
