@@ -17,6 +17,7 @@ export default function Home() {
         <meta property="og:description" content="invest in startups from all segments or participate by being an early employee" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>Hello</h1>
     </div>
   );
 }
