@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Work+Sans:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Work+Sans:wght@200&display=swap");
 
-:root{
+:root {
   --bg-main: #000;
-  --bg-secondary: #1A1A1A;
-  --border: #2F3336;
+  --bg-secondary: #1a1a1a;
+  --border: #2f3336;
   --text-main: #fefefe;
-  --text-secondary: #B3B3B3;
+  --text-secondary: #b3b3b3;
   --color-brand: #238636;
-  --blue-text: #58A6FF;
-  --green-text: #3CD259;
-  --red-text: #F85149;
-};
+  --blue-text: #58a6ff;
+  --green-text: #3cd259;
+  --red-text: #f85149;
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
 }
@@ -31,11 +31,11 @@ a {
   box-sizing: border-box;
 }
 
-h1{
-  font-size:calc(1.575rem + 3.9vw);
+h1 {
+  font-size: calc(1.575rem + 3.9vw);
 }
-@media (min-width: 1200px){
-  h1{
+@media (min-width: 1200px) {
+  h1 {
     font-size: 4.5rem;
   }
 }
