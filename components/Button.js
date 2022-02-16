@@ -7,9 +7,9 @@ function Button({ specs }) {
           .btn {
             display: flex;
             align-items: center;
-            // height: ${specs.height}rem;
+            //height: ${specs.height}rem;
             // width: ${specs.width}rem;
-            padding: 0 3rem;
+            padding: 0 1.5rem;
             background-color: var(--color-brand);
             color: var(--text-main);
             gap: 5px;

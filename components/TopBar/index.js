@@ -22,16 +22,30 @@ const TopBar = () => {
           />
           <input type="text" placeholder="Search Anything" />
           <div className="topbar-content-right">
-            {/* <Button /> */}
+            <Button
+              specs={{
+                text: "Invite",
+                icon: (
+                  <Image
+                    src="/icons/invite.svg"
+                    alt="invite icon"
+                    height={15}
+                    width={15}
+                  />
+                ),
+              }}
+            />
             <Image
-              src="/icons/public/wallet.svg"
+              src="/icons/wallet.svg"
               alt="Wallet Icon"
-              layout="fill"
+              height={25}
+              width={25}
             />
             <Image
               src="/icons/user-profile.svg"
               alt="Account Icon"
-              layout="fill"
+              width={25}
+              height={25}
             />
           </div>
         </div>
