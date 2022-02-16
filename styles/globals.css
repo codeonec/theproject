@@ -133,6 +133,9 @@ h1 {
 .signup span:hover {
   text-decoration: underline;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 @media (max-width: 1285px) {
   html {
     font-size: 14px;

@@ -7,15 +7,18 @@ function Button({ specs }) {
           .btn {
             display: flex;
             align-items: center;
-            //height: ${specs.height}rem;
+
+            // height: ${specs.height}rem;
+            line-height: 0px;
             // width: ${specs.width}rem;
-            padding: 0 1.5rem;
+            padding: 0.2rem 1.5rem;
             background-color: var(--color-brand);
             color: var(--text-main);
             gap: 5px;
-            border-radius: 555rem;
+            border-radius: 30px;
             border: none;
             font-size: 1rem;
+            cursor: pointer;
           }
           .btn:hover {
             background-color: #1a682a;
