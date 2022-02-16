@@ -1,11 +1,5 @@
 import React from "react";
 function Button({ specs }) {
-  let icon;
-  if (specs.icon) {
-    icon = specs.icon;
-  } else {
-    icon = null;
-  }
   return (
     <div>
       <style jsx>
@@ -32,7 +26,7 @@ function Button({ specs }) {
         `}
       </style>
       <button className="btn">
-        {icon}
+        {specs.icon && specs.icon}
         <p className="btn_text">{specs.text}</p>
       </button>
     </div>

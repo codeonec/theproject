@@ -35,6 +35,7 @@ export default function Home() {
               width: 21,
               height: 2,
               text: "Sign in with Apple",
+              icon: <img src="/google.svg" alt="" />,
             }}
           /> */}
           <div className="ssoLogin">
