@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }) {
           {`
             .app_container{
               display: flex;
+              position: relative;
+              height: 100%;
             }
           `}
       </style>
