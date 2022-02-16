@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import Head from "next/head";
 import SideBar from '../components/SideBar'
 import TopBar from '../components/TopBar'
 import { useRouter } from 'next/router'
@@ -7,6 +8,9 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
     <div>
+      <Head>
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <style jsx>
           {`
             .app_container{
