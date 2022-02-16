@@ -13,20 +13,20 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Uprise. Funding next big thing" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" itemProp="image" content="/logo.svg" />
+        <meta property="og:image" itemProp="image" content="icons/logo.svg" />
         <meta
           property="og:description"
           content="invest in startups from all segments or participate by being an early employee"
         />
       </Head>
       <div className="logo">
-        <img src="/logo.svg" alt="" />
+        <img src="icons/logo.svg" alt="" />
       </div>
       <div className="loginInterface">
         <div className="banner">Log in to Uprise</div>
         <div className="sso">
           <div className="ssoLogin">
-            <img src="/google.svg" alt="" />
+            <img src="icons/google.svg" alt="" />
             <p>Continue with Google</p>
           </div>
           {/* <Button
@@ -38,7 +38,7 @@ export default function Home() {
             }}
           /> */}
           <div className="ssoLogin">
-            <img src="/apple.svg" alt="" />
+            <img src="icons/apple.svg" alt="" />
             <p>Continue with Apple</p>
           </div>
         </div>
