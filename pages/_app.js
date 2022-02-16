@@ -6,10 +6,19 @@ import { useRouter } from 'next/router'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
-    <div className='app_container'>
-      {router.pathname !== '/sign_in' && <SideBar />}
+    <div>
+      <style jsx>
+          {`
+            .app_container{
+              display: flex;
+            }
+          `}
+      </style>
       {router.pathname !== '/sign_in' && <TopBar />}
-      <Component {...pageProps} />
+      <div className='app_container'>
+        {router.pathname !== '/sign_in' && <SideBar />}
+        <Component {...pageProps} />
+      </div>
     </div>
   )
 }
