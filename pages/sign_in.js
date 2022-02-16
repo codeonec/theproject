@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Button from "../components/Button";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Uprise. Funding next big thing" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" itemprop="image" content="/logo.svg"/>
+        <meta property="og:image" itemprop="image" content="/logo.svg" />
         <meta
           property="og:description"
           content="invest in startups from all segments or participate by being an early employee"
@@ -29,6 +30,13 @@ export default function Home() {
             <img src="/google.svg" alt="" />
             <p>Continue with Google</p>
           </div>
+          {/* <Button
+            specs={{
+              width: 21,
+              height: 2,
+              text: "Sign in with Apple",
+            }}
+          /> */}
           <div className="ssoLogin">
             <img src="/apple.svg" alt="" />
             <p>Continue with Apple</p>
