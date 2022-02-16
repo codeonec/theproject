@@ -2,6 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 
 export default function Home() {
+  function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log("Name: " + profile.getName());
+    console.log("Image URL: " + profile.getImageUrl());
+    console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
   return (
     <div>
       <Head>
@@ -18,6 +25,15 @@ export default function Home() {
           content="invest in startups from all segments or participate by being an early employee"
         />
         <link rel="icon" href="/favicon.svg" />
+        <script
+          src="https://apis.google.com/js/platform.js"
+          async
+          defer
+        ></script>
+        <meta
+          name="google-signin-client_id"
+          content="249580528068-9el31j8cchb1vaha8budspaejs0b0kpq.apps.googleusercontent.com"
+        ></meta>
       </Head>
       <div className="logo">
         <img src="/logo.svg" alt="" />
@@ -25,8 +41,15 @@ export default function Home() {
       <div className="loginInterface">
         <div className="banner">Log in to Uprise</div>
         <div className="sso">
-          <div className="ssoLogin"><img src="/google.svg" alt="" /><p>Continue with Google</p></div>
-          <div className="ssoLogin"><img src="/apple.svg" alt="" /><p>Continue with Apple</p></div>
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          <div className="ssoLogin">
+            <img src="/google.svg" alt="" />
+            <p>Continue with Google</p>
+          </div>
+          <div className="ssoLogin">
+            <img src="/apple.svg" alt="" />
+            <p>Continue with Apple</p>
+          </div>
         </div>
         <p className="or">OR</p>
         <div className="normalLogin">
@@ -38,9 +61,12 @@ export default function Home() {
             <p>Password</p>
             <input type="text" placeholder="Password" />
           </div>
+          <div className="loginButton">Log in</div>
+          <div className="signup">
+            Don't have an account? <span>Sign up</span>
+          </div>
         </div>
       </div>
-      
     </div>
   );
 }

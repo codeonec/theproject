@@ -50,14 +50,14 @@ h1 {
   align-items: center;
 }
 .banner{
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin: 3.25rem 0 1.1875rem 0;
+  margin: 3rem 0 1.125rem 0;
 }
 .ssoLogin{
   display: flex;
   justify-content: center;
-  font-size: 15px;
+  font-size: 0.9375rem;
   border-radius: 1.8125rem;
   background-color: var(--bg-secondary);
   width: 21.5rem;
@@ -72,7 +72,7 @@ h1 {
 .or{
   margin-top: 2.3125rem;
   color: #484848;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .or::before,.or::after{
   content: "";
@@ -90,7 +90,7 @@ h1 {
   left: 5.9375rem;
 }
 .field{
-  font-size: 15px;
+  font-size: 0.9375rem;
   display: flex;
   flex-direction: column;
 }
@@ -103,6 +103,7 @@ h1 {
   padding: 0.9375rem 1.375rem;
   border-radius: 0.5rem;
   width: 21.5rem;
+  font-size: 0.9375rem;
   border: none;
   outline: none;
   background-color:var(--bg-secondary);
@@ -110,8 +111,28 @@ h1 {
 .field input::placeholder{
   color: #ffffff33;
 }
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 4.5rem;
+.loginButton{
+  margin-top: 2rem;
+  width: 21.5rem;
+  line-height: 2.5625rem;
+  font-size: 0.9375rem;
+  background-color: var(--color-brand);
+  border-radius: 1.625rem;
+  cursor: pointer;
+}
+.signup{
+  font-size: 0.9375rem;
+  margin-top: 1.125rem;
+}
+.signup span{
+  color: var(--blue-text);
+  cursor: pointer;
+}
+.signup span:hover{
+  text-decoration: underline;
+}
+@media (max-width: 1285px) {
+  html{
+    font-size: 14px;
   }
 }
