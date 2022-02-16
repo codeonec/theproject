@@ -13,7 +13,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Uprise. Funding next big thing" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" itemprop="image" content="/logo.svg" />
+        <meta property="og:image" itemProp="image" content="/logo.svg" />
         <meta
           property="og:description"
           content="invest in startups from all segments or participate by being an early employee"
@@ -54,7 +54,10 @@ export default function Home() {
           </div>
           <div className="loginButton">Log in</div>
           <div className="signup">
-            Don't have an account? <span>Sign up</span>
+            Don&apos;t have an account?{" "}
+            <span>
+              <a href="/sign_up">Sign up</a>
+            </span>
           </div>
         </div>
       </div>

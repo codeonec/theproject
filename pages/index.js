@@ -19,6 +19,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.svg" />
       </Head>
+      <h1>This is home</h1>
       </div>  
       );
 }
