@@ -46,7 +46,7 @@ export default function Home() {
           </div>
           <div className="loginButton">Log in</div>
           <div className="signup">
-            Don't have an account? <span>Sign up</span>
+            Don&apos;t have an account? <span>Sign up</span>
           </div>
         </div>
       </div>
