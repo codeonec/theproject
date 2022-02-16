@@ -34,6 +34,80 @@ a {
 h1 {
   font-size: calc(1.575rem + 3.9vw);
 }
+.logo{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+.logo img{
+  margin: 15px;
+}
+.loginInterface{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.banner{
+  font-size: 24px;
+  font-weight: bold;
+  margin: 8vh 0 2.4vh 0;
+}
+.ssoLogin{
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  border-radius: 29px;
+  background-color: var(--bg-secondary);
+  width: 21.5rem;
+  height: 2.875rem;
+  margin-top: 1.563rem;
+}
+.ssoLogin img{
+  width: 20px;
+  margin-right: 0.625rem;
+}
+.or{
+  margin-top: 2.313rem;
+  color: #484848;
+  font-size: 12px;
+}
+.or::before,.or::after{
+  content: "";
+  display: block;
+  width: 9.375rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.or::before{
+  top: 0.5rem;
+  left: -5.938rem;
+}
+.or::after{
+  top: -0.5rem;
+  left: 5.938rem;
+}
+.field{
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.field p{
+  margin: 0.938rem 0;
+  text-align: start;
+}
+.field input{
+  padding: 0.938rem 22px;
+  border-radius: 8px;
+  width: 21.5rem;
+  border: none;
+  outline: none;
+  background-color:var(--bg-secondary);
+}
+.field input::placeholder{
+  color: #ffffff33;
+}
 @media (min-width: 1200px) {
   h1 {
     font-size: 4.5rem;

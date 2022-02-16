@@ -17,9 +17,30 @@ export default function Home() {
           property="og:description"
           content="invest in startups from all segments or participate by being an early employee"
         />
-        <link rel="icon" href="/logo.svg" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
-      <h1>Hello</h1>
+      <div className="logo">
+        <img src="/logo.svg" alt="" />
+      </div>
+      <div className="loginInterface">
+        <div className="banner">Log in to Uprise</div>
+        <div className="sso">
+          <div className="ssoLogin"><img src="/google.svg" alt="" /><p>Continue with Google</p></div>
+          <div className="ssoLogin"><img src="/apple.svg" alt="" /><p>Continue with Apple</p></div>
+        </div>
+        <p className="or">OR</p>
+        <div className="normalLogin">
+          <div className="Email field">
+            <p>Email or Username</p>
+            <input type="text" placeholder="Email or Username" />
+          </div>
+          <div className="Password field">
+            <p>Password</p>
+            <input type="text" placeholder="Password" />
+          </div>
+        </div>
+      </div>
+      
     </div>
   );
 }
