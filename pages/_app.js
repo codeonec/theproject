@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="icons/favicon.svg" />
       </Head>
       <style jsx>
           {`
