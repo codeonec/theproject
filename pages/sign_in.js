@@ -52,7 +52,7 @@ export default function Home() {
           <div className={styles.field}>
             <p>Password</p>
             <input type="text" placeholder="Password" />
-      </div>
+          </div>
           <div className={styles.loginButton}>Log in</div>
           <div className={styles.signup}>
             Don&apos;t have an account?
@@ -61,7 +61,7 @@ export default function Home() {
             </span>
           </div>
         </div>
-        </div>
-        </div>
+      </div>
+    </div>
   );
 }
