@@ -3,9 +3,27 @@ import Head from "next/head";
 import SideBar from '../components/SideBar'
 import TopBar from '../components/TopBar'
 import { useRouter } from 'next/router'
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
+  useEffect(()=>{
+    let i=0;
+    setInterval(()=>{
+      if(i===0){
+        document.title="¯¯OO¯¯";
+        i=1;
+      }
+      else if(i===1){
+        document.title="--OO--";
+        i=2;
+      }
+      else if(i===2){
+        document.title="__OO__";
+        i=0;
+      }
+    },400)
+  },[]);
   return (
     <div>
       <Head>
