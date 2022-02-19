@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
               display: flex;
               position: relative;
               height: calc(100vh - 65px);
-              max-width:1200px;
+              ${router.pathname !=='/sign_in' && "max-width:1200px;"}
               margin:0 auto;
             }
             .appWrap{

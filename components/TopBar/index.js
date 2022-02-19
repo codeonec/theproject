@@ -58,6 +58,7 @@ const TopBar = () => {
             <Button
               specs={{
                 text: "Invite",
+                height: 2.5,
                 icon: (
                   <Image
                     src="/icons/invite.svg"

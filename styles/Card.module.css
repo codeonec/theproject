@@ -9,6 +9,7 @@
     padding: 1.125rem;
 }
 .pic img{
+    user-select: none;
     width: 3.75rem;
     height: 3.75rem;
 }
@@ -44,6 +45,8 @@
     color: var(--text-secondary);
 }
 .stats{
+    display: flex;
+    flex-direction: column;
     padding: 1.125rem 1.25rem;
 }
 .topStats{
@@ -75,4 +78,9 @@
 .percent{
     font-size: 1rem !important;
     color: var(--green-text) !important;
+}
+.invest{
+    display: flex;
+    align-items: center;
+    margin-top: auto;
 }
