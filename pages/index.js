@@ -28,6 +28,30 @@ export default function Home() {
             image={<img src="/pngs/icon.png" />}
             revenue="6 Mn"
             price="982.00"
+            valuation="28 Bn"
+            founded="Founded in 2010 by Notion Inc."
+            likeCount="69K"
+            percent={9.12}
+            name="Notion"
+            description="The PEER fund thesis: a crypto-focused venture fund will outperform traditional venture capital over the next 10 years. We are investing in pre-seed, seed, series A with follow-on and focused on equity and token."
+          />
+          <Card
+            dollar="₹"
+            image={<img src="/pngs/icon.png" />}
+            revenue="6 Mn"
+            price="982.00"
+            valuation="20 Bn"
+            founded="Founded in 2010 by Mr Ambani."
+            likeCount="69K"
+            percent={9.12}
+            name="ABC"
+            description="ed on equity and token."
+          />
+          <Card
+            dollar="₹"
+            image={<img src="/pngs/icon.png" />}
+            revenue="6 Mn"
+            price="982.00"
             valuation="69 Bn"
             founded="Founded in 2010 by Notion Inc."
             likeCount="69K"

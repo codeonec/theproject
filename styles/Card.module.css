@@ -1,15 +1,17 @@
 .Card{
+    min-height: 14rem;
     background-color: var(--bg-secondary);
     display: flex;
     border-radius: 15px;
-    margin: 1.25rem 0;
+    margin: 1.5rem 0;
 }
 .information{
+    display: flex;
+    flex-direction: column;
     border-right: 1px solid var(--border);
     padding: 1.125rem;
 }
 .pic img{
-    user-select: none;
     width: 3.75rem;
     height: 3.75rem;
 }
@@ -30,18 +32,32 @@
 }
 .description{
     margin-top: 1.2rem;
-    line-height: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3rem;
     width: 21.5625rem;
     font-size: 0.9375rem;
 }
 .likeNshare{
-    margin: 1.3125rem 0 0 0.3125rem;
+    margin-top: auto;
+    display: flex;
+    margin-left:0.3125rem;
+}
+.like{
+    margin-right: 2.625rem;
+    /* padding: 5px 8px;
+    border-radius: 20px; */
+}
+.like span{
+    padding-top: 0.25rem;
+}
+.like:hover{
+    cursor: pointer;
 }
 .likeNshare img{
     height: 0.9375rem;
 }
 .likeNshare span{
-    margin: 0 2.625rem 0 0.5rem;
+    margin-left:0.5rem;
     color: var(--text-secondary);
 }
 .stats{
@@ -51,6 +67,9 @@
 }
 .topStats{
     display: flex;
+    justify-content:space-between;
+    width: 14rem;
+    margin-right: 4rem;
 }
 .statTitle{
     font-size: 0.75rem;
@@ -63,7 +82,7 @@
     margin-top: 0.625rem;
 }
 .revenue{
-    margin: 0 5.5rem 0 6rem ;
+    /* margin: 0 5.5rem 0 6rem ; */
 }
 .price{
     margin-top: 1.875rem;
@@ -83,4 +102,10 @@
     display: flex;
     align-items: center;
     margin-top: auto;
+}
+.moreInfo{
+    color: var(--blue-text);
+    font-size: 0.9375rem;
+    margin-left: 3.25rem;
+    cursor: pointer;
 }

@@ -18,10 +18,14 @@ export default function Card({dollar,image,description,founded,name,likeCount,va
           {description}
         </div>
         <div className={styles.likeNshare}>
-          <img src="Icons/like.svg" alt="" />
-          <span id="likeCount">{likeCount}</span>
-          <img src="Icons/share.svg" alt="" />
-          <span>Share</span>
+          <div className={styles.like}>
+            <img src="Icons/like.svg" alt="" />
+            <span id="likeCount">{likeCount}</span>
+          </div>
+          <div className={styles.share}>
+            <img src="Icons/share.svg" alt="" />
+            <span>Share</span>
+            </div>
         </div>
       </div>
       <div className={styles.stats}>
@@ -45,7 +49,7 @@ export default function Card({dollar,image,description,founded,name,likeCount,va
         </div>
         <div className={styles.invest}>
           <Button specs={{text:"Invest"}}></Button>
-          <div className={styles.moreInfo}></div>
+          <div className={styles.moreInfo}>More Information</div>
         </div>
       </div>
     </div>

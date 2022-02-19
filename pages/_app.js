@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
             }
           `}
       </style>
-      <div class="appWrap">
+      <div className="appWrap">
         {router.pathname !== '/sign_in' && <TopBar />}
         <div className='app_container'>
           {router.pathname !== '/sign_in' && <SideBar />}

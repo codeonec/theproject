@@ -27,7 +27,7 @@ const TopBar = () => {
             gap: 25px;
           }
           .topbar-content-input {
-            line-height: 40px;
+            line-height: 2.5rem;
             padding: 0rem 1.5rem;
             width: 26rem;
             background-color: var(--bg-secondary);
@@ -35,6 +35,7 @@ const TopBar = () => {
             border: none;
             border-radius: 30px;
           }
+
           .topbar-content-input:focus {
             outline: none;
           }
