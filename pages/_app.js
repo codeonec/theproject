@@ -16,17 +16,25 @@ function MyApp({ Component, pageProps }) {
             .app_container{
               display: flex;
               position: relative;
-              height: 100%;
+              height: calc(100vh - 65px);
+              max-width:1200px;
+              margin:0 auto;
+            }
+            .appWrap{
+              height:100vh;
             }
           `}
       </style>
-      {router.pathname !== '/sign_in' && <TopBar />}
-      <div className='app_container'>
-        {router.pathname !== '/sign_in' && <SideBar />}
-        <Component {...pageProps} />
+      <div class="appWrap">
+        {router.pathname !== '/sign_in' && <TopBar />}
+        <div className='app_container'>
+          {router.pathname !== '/sign_in' && <SideBar />}
+          <Component {...pageProps} />
+        </div>
       </div>
+      
     </div>
   )
 }
 
-export default MyApp
+export default MyApp;

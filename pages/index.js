@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import Card from "../components/Card";
+import styles from "../styles/index.module.css";
 
 export default function Home() {
   return (
@@ -12,13 +14,19 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Uprise. Funding next big thing" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" itemProp="image" content="/logo.svg"/>
+        <meta property="og:image" itemProp="image" content="/logo.svg" />
         <meta
           property="og:description"
           content="invest in startups from all segments or participate by being an early employee"
         />
       </Head>
-      <h1>This is home</h1>
-      </div>  
-      );
+      <div className={styles.home}>
+        <div className={styles.cards}>
+          <div className={styles.recommended}>Recommended ✨</div>
+          <Card />
+        </div>
+        <div className={styles.listings}></div>
+      </div>
+    </div>
+  );
 }

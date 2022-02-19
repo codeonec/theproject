@@ -1,0 +1,10 @@
+.cards{
+    padding: 20px;
+    border-right: 1px solid var(--border);
+    min-height: calc(100vh - 65px);
+}
+.recommended{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+}

@@ -13,7 +13,7 @@ const SideBar = () => {
                         padding: 18px 0;
                         border-right: 1px solid var(--border);
                         min-height: 100%;
-                        width: 240px;
+                        width: 180px;
                     }
                     .links{
                         display: flex;
@@ -21,6 +21,7 @@ const SideBar = () => {
                     }
                     .links .link{
                         padding: 12px 16px;
+                        // padding-left:22px;
                         transition: 0.35s;
                         font-size: 15px;
                         color: var(--text-secondary);
