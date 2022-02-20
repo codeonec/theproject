@@ -5,7 +5,7 @@ import Card from "../../components/Card"
 
 export default function Trending() {
   return (
-    <div class={styles.wrap}>
+    <div className={styles.wrap}>
       <div className={styles.container}>
         <div className={styles.cards}>
           <div className={style1.title}><div>Trending &nbsp;</div> <img src="Icons/rocket.svg" alt="" /></div>
