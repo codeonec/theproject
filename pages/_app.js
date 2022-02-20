@@ -49,7 +49,6 @@ function MyApp({ Component, pageProps }) {
         <div className='app_container'>
           {router.pathname !== '/sign_in' && <SideBar />}
           <Component {...pageProps} />
-          {router.pathname !== '/sign_in' && <TopListing />}
         </div>
       </div>
       

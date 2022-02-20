@@ -1,11 +1,11 @@
-.TopListing{
+.container{
     margin: 1.25rem;
     height: calc(100% - 1.25rem);
     border-radius: 15px 15px 0 0 ;
     width: 20.5rem;
     overflow-y: scroll;
 }
-.TopListing::-webkit-scrollbar {
+.container::-webkit-scrollbar {
     width: 0;
 }
 .element{

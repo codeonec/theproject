@@ -1,0 +1,11 @@
+.title {
+  font-size: 1.0625rem;
+  font-weight: bold;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+.title img{
+  height: 1.5rem;
+  padding-top: 0.25rem;
+}

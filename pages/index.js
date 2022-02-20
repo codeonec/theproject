@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import Card from "../components/Card";
+import TopListing from "../components/TopListing"
 import styles from "../styles/index.module.css";
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.wrap}>
       <Head>
         <title>Uprise</title>
         <meta name="description" content="UPRISE.COM" />
@@ -20,7 +21,7 @@ export default function Home() {
           content="invest in startups from all segments or participate by being an early employee"
         />
       </Head>
-      <div className={styles.home}>
+      <div className={styles.container}>
         <div className={styles.cards}>
           <div className={styles.title}>Recommended ✨</div>
           <Card
@@ -62,6 +63,7 @@ export default function Home() {
         </div>
         <div className={styles.listings}></div>
       </div>
+      <TopListing />
     </div>
   );
 }
