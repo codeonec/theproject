@@ -18,7 +18,7 @@ const TopBar = () => {
             align-items: center;
             max-width: 1200px;
             margin: auto;
-            padding: 12px 16px;
+            padding: 0.75rem 1rem;
             justify-content: space-between;
           }
           .topbar-content-right {

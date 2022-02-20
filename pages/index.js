@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
       <div className={styles.home}>
         <div className={styles.cards}>
-          <div className={styles.recommended}>Recommended ✨</div>
+          <div className={styles.title}>Recommended ✨</div>
           <Card
             dollar="₹"
             image={<img src="/pngs/icon.png" />}

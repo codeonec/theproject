@@ -12,18 +12,18 @@ function MyApp({ Component, pageProps }) {
     let i=0;
     setInterval(()=>{
       if(i===0){
-        document.title="¯¯OO¯¯";
+        document.title="Uprise";
         i=1;
       }
       else if(i===1){
-        document.title="--OO--";
+        document.title="Uprise 🚀";
         i=2;
       }
       else if(i===2){
-        document.title="__OO__";
+        document.title="Uprise 🚀🚀";
         i=0;
       }
-    },400)
+    },2000)
   },[]);
   return (
     <div>
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
             .app_container{
               display: flex;
               position: relative;
-              height: calc(100vh - 65px);
+              height: calc(100vh - 4.0625rem);
               ${router.pathname !=='/sign_in' && "max-width:1200px;"}
               margin:0 auto;
             }
