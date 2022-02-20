@@ -4,6 +4,7 @@ import SideBar from '../components/SideBar'
 import TopBar from '../components/TopBar'
 import { useRouter } from 'next/router'
 import { useEffect } from "react";
+import TopListing from '../components/TopListing';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -48,6 +49,7 @@ function MyApp({ Component, pageProps }) {
         <div className='app_container'>
           {router.pathname !== '/sign_in' && <SideBar />}
           <Component {...pageProps} />
+          {router.pathname !== '/sign_in' && <TopListing />}
         </div>
       </div>
       
