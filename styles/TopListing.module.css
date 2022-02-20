@@ -1,7 +1,7 @@
 .TopListing{
     margin: 1.25rem;
     height: calc(100% - 1.25rem);
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0 ;
     width: 20.5rem;
     overflow-y: scroll;
 }
@@ -10,7 +10,7 @@
 }
 .element{
     min-height: 50rem;
-    margin-top: 1.875rem;
+    margin-top: 1.8125rem;
     margin-bottom: 1.25rem;
     width: 100%;
     height: 100%;

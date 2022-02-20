@@ -15,7 +15,7 @@
   cursor: pointer;
 }
 .btn:hover {
-  background-color: var(--color-brand);
+  background-color: var(--color-hover);
 }
 .btn:focus {
   border: none;
