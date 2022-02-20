@@ -3,7 +3,7 @@
     background-color: var(--bg-secondary);
     display: flex;
     border-radius: 15px;
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
 }
 .information{
     display: flex;
@@ -12,11 +12,12 @@
     padding: 1.125rem;
 }
 .pic img{
+    /* border-radius: 8px; */
     width: 3.75rem;
     height: 3.75rem;
 }
 .profile{
-    /* why height */
+    /* why height ?*/
     height: 3.75rem;
     display: flex;
     font-size: 1.25rem;
@@ -94,9 +95,16 @@
     margin-left: 0.25rem;
     width: 0.9rem;
 }
-.percent{
+.percentGreen{
     font-size: 1rem !important;
     color: var(--green-text) !important;
+}
+.percentRed{
+    font-size: 1rem !important;
+    color: var(--red-text) !important;
+}
+.percentRed::selection{
+    color: red;
 }
 .invest{
     display: flex;
@@ -108,4 +116,7 @@
     font-size: 0.9375rem;
     margin-left: 3.25rem;
     cursor: pointer;
+}
+.moreInfo:hover{
+    text-decoration: underline;
 }

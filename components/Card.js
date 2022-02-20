@@ -1,5 +1,6 @@
 import styles from "../styles/Card.module.css";
 import Button from "../components/Button";
+import Link from "next/link"
 
 export default function Card({dollar,image,description,founded,name,likeCount,valuation,revenue,price,percent,moreInfo}) {
   return (
@@ -42,14 +43,18 @@ export default function Card({dollar,image,description,founded,name,likeCount,va
           <div className={styles.priceWrap}>
             <span id="Price">
               {dollar}{price}
-                <img src="Icons/uparrow.svg" alt="" />
-                <span className={styles.percent}>{percent}%</span>
+                {percent>0?<img src="Icons/uparrow.svg" alt="" />:<img src="Icons/downarrow.svg" alt="" />}
+                <span className={percent>0?styles.percentGreen:styles.percentRed}>{percent>0?percent:percent*-1}%</span>
             </span>
           </div>
         </div>
         <div className={styles.invest}>
           <Button specs={{text:"Invest"}}></Button>
-          <div className={styles.moreInfo}>More Information</div>
+          <Link href={moreInfo || "#"}>
+            <a target={moreInfo?"_blank":""}>
+                <div className={styles.moreInfo}>More Information</div>
+            </a>
+        </Link>
         </div>
       </div>
     </div>
