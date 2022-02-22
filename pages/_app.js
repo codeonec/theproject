@@ -28,7 +28,21 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <link rel="icon" href="icons/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="Icons/favicon.svg" />
+        <title>Uprise</title>
+        <meta name="description" content="UPRISE.COM" />
+        <meta property="theme-color" content="#000000" />
+        <meta property="og:site_name" content="Uprise.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Uprise. Funding next big thing" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" itemProp="image" content="" />
+        {/* https://uprise-keval9shah.vercel.app/pngs/logo.png */}
+        <meta
+          property="og:description"
+          content="invest in startups from all segments or participate by being an early employee"
+        />
       </Head>
       <style jsx>
           {`
@@ -36,7 +50,7 @@ function MyApp({ Component, pageProps }) {
               display: flex;
               position: relative;
               height: calc(100vh - 4.0625rem);
-              ${router.pathname !=='/sign_in' && "max-width:1200px;"}
+              ${router.pathname !=='/sign_in' && "max-width:1285px;"}
               margin:0 auto;
             }
             .appWrap{

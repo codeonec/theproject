@@ -2,10 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Button from "../components/Button";
 import styles from "../styles/sign_in.module.css";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>Uprise</title>
         <meta name="description" content="UPRISE.COM" />
@@ -14,20 +15,20 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Uprise. Funding next big thing" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" itemProp="image" content="icons/logo.svg" />
+        <meta property="og:image" itemProp="image" content="Icons/logo.svg" />
         <meta
           property="og:description"
           content="invest in startups from all segments or participate by being an early employee"
         />
       </Head>
       <div className={styles.logo}>
-        <img src="icons/logo.svg" alt="" />
+        <img src="Icons/logo.svg" alt="" />
       </div>
       <div className={styles.loginInterface}>
         <div className={styles.banner}>Log in to Uprise</div>
         <div className={styles.sso}>
           <div className={styles.ssoLogin}>
-            <img src="icons/google.svg" alt="" />
+            <img src="Icons/google.svg" alt="" />
             <p>Continue with Google</p>
           </div>
           {/* <Button
@@ -39,7 +40,7 @@ export default function Home() {
             }}
           /> */}
           <div className={styles.ssoLogin}>
-            <img src="icons/apple.svg" alt="" />
+            <img src="Icons/apple.svg" alt="" />
             <p>Continue with Apple</p>
           </div>
         </div>
@@ -57,7 +58,9 @@ export default function Home() {
           <div className={styles.signup}>
             Don&apos;t have an account?
             <span>
-              <a href="/sign_up">Sign up</a>
+              <Link href="/sign_up">
+                <a>Sign up</a>
+                </Link>
             </span>
           </div>
         </div>

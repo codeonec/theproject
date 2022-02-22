@@ -1,0 +1,39 @@
+.topbar {
+  /* padding: 18px; */
+  border-bottom: 1px solid var(--border);
+}
+.topbarContentCursorPointer {
+  cursor: pointer;
+}
+.topbarContent {
+  display: flex;
+  align-items: center;
+  max-width: 1250px;
+  margin: auto;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+}
+.topbarContentRight {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.topbarContentInput {
+  line-height: 2.5rem;
+  padding: 0rem 1.5rem;
+  width: 26rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 30px;
+}
+
+.topbarContentInput:focus {
+  outline: none;
+}
+@media (max-width: 738px) {
+  .topbarContent input,
+  .topbarContentRight Button {
+    display: none;
+  }
+}

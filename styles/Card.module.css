@@ -120,3 +120,18 @@
 .moreInfo:hover{
     text-decoration: underline;
 }
+@media (max-width: 738px) {
+    .Card{
+        flex-direction: column;
+    }
+    .information{
+        border: none;
+    }
+    .description{
+        width:auto;
+        max-width: 28rem;
+    }
+    .priceWrap{
+        margin-bottom: 10px;
+    }
+}
