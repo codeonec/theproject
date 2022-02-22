@@ -5,7 +5,6 @@ import Card from "../../components/Card"
 
 export default function Trending() {
   return (
-    <div class={styles.wrap}>
       <div className={styles.container}>
         <div className={styles.cards}>
           <div className={style1.title}><div>Trending &nbsp;</div> <img src="Icons/rocket.svg" alt="" /></div>
@@ -46,9 +45,7 @@ export default function Trending() {
             description="The PEER fund thesis: a crypto-focused venture fund will outperform traditional venture capital over the next 10 years. We are investing in pre-seed, seed, series A with follow-on and focused on equity and token."
           />
         </div>
-        <div className={styles.listings}></div>
+        <TopListing />
       </div>
-      <TopListing />
-    </div>
   );
 }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Work+Sans:wght@200&display=swap");
 
 :root {
-  --bg-main: #0d0d0d;
+  --bg-main: #000000;
   --bg-secondary: #1a1a1a;
   --border: #2f3336;
   --text-main: #fefefe;
@@ -54,6 +54,6 @@ button{
 
 @media (max-width: 1285px) {
   html {
-    font-size: 14px;
+    font-size: 14.5px;
   }
 }

@@ -1,98 +1,114 @@
 .logo {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid var(--border);
-  }
-  .logo img {
-    margin: 0.9375rem;
-  }
-  .loginInterface {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-  .banner {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 3rem 0 1.125rem 0;
-  }
-  .ssoLogin {
-    display: flex;
-    justify-content: center;
-    font-size: 0.9375rem;
-    border-radius: 1.8125rem;
-    background-color: var(--bg-secondary);
-    width: 21.5rem;
-    height: 2.875rem;
-    margin-top: 1.5625rem;
-    cursor: pointer;
-  }
-  .ssoLogin img {
-    width: 1.25rem;
-    margin-right: 0.625rem;
-  }
-  .or {
-    margin-top: 2.3125rem;
-    color: #484848;
-    font-size: 0.75rem;
-  }
-  .or::before,
-  .or::after {
-    content: "";
-    display: block;
-    width: 9.375rem;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-  }
-  .or::before {
-    top: 0.5rem;
-    left: -5.9375rem;
-  }
-  .or::after {
-    top: -0.5rem;
-    left: 5.9375rem;
-  }
-  .field {
-    font-size: 0.9375rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .field p {
-    margin: 0.9375rem 0;
-    text-align: start;
-  }
-  .field input {
-    color: var(--text-secondary);
-    padding: 0.9375rem 1.375rem;
-    border-radius: 0.5rem;
-    width: 21.5rem;
-    font-size: 0.9375rem;
-    border: none;
-    outline: none;
-    background-color: var(--bg-secondary);
-  }
-  .field input::placeholder {
-    color: #ffffff33;
-  }
-  .loginButton {
-    margin-top: 2rem;
-    width: 21.5rem;
-    line-height: 2.5625rem;
-    font-size: 0.9375rem;
-    background-color: var(--color-brand);
-    border-radius: 1.625rem;
-    cursor: pointer;
-  }
-  .signup {
-    font-size: 0.9375rem;
-    margin-top: 1.125rem;
-  }
-  .signup span {
-    color: var(--blue-text);
-    cursor: pointer;
-  }
-  .signup span:hover {
-    text-decoration: underline;
-  }
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+.logo img {
+  margin: 0.9375rem;
+}
+.loginInterface {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.banner {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 3rem 0 1.125rem 0;
+}
+.ssoLogin {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9375rem;
+  border-radius: 1.8125rem;
+  background-color: var(--bg-secondary);
+  width: 21.5rem;
+  height: 2.875rem;
+  margin-top: 1.5625rem;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+.ssoLogin img {
+  width: 1.25rem;
+  margin-right: 0.625rem;
+}
+.or {
+  margin-top: 2.3125rem;
+  color: #484848;
+  font-size: 0.75rem;
+}
+.or::before,
+.or::after {
+  content: "";
+  display: block;
+  width: 9.375rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.or::before {
+  top: 0.5rem;
+  left: -5.9375rem;
+}
+.or::after {
+  top: -0.5rem;
+  left: 5.9375rem;
+}
+.field {
+  font-size: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+}
+.field p {
+  margin: 0.9375rem 0;
+  text-align: start;
+}
+.field input {
+  color: var(--text-secondary);
+  padding: 0.9375rem 1.375rem;
+  border-radius: 0.5rem;
+  width: 21.5rem;
+  font-size: 0.9375rem;
+  border: none;
+  outline: none;
+  background-color: var(--bg-secondary);
+}
+.field input::placeholder {
+  color: #ffffff33;
+}
+.loginButton {
+  user-select: none;
+  margin-top: 2rem;
+  width: 21.5rem;
+  line-height: 2.5625rem;
+  font-size: 0.9375rem;
+  background-color: var(--color-brand);
+  border-radius: 1.625rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.loginButton:hover{
+  background-color: var(--color-hover);
+}
+.signup {
+  font-size: 0.9375rem;
+  margin: 1.125rem 0;
+}
+.signup span {
+  color: var(--blue-text);
+  cursor: pointer;
+}
+.signup span:hover {
+  text-decoration: underline;
+}
+.container::-webkit-scrollbar{
+  width: 0;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  overflow-y: scroll;
+}

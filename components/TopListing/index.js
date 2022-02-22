@@ -4,7 +4,7 @@ export default function TopListing() {
   return (
     <div className={styles.container}>
       <div className={styles.title}>New Listings</div>
-      <div className={styles.element}>india</div>
+      <div className={styles.element}>Scroll</div>
     </div>
   );
 }
