@@ -5,7 +5,12 @@ import TopBar from '../components/TopBar'
 import { useRouter } from 'next/router'
 import { useEffect } from "react";
 import TopListing from '../components/TopListing';
+import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 
+const supportedChainIds = [1,4]
+const connectors = {
+  injected: {}
+}
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   useEffect(()=>{
@@ -26,6 +31,7 @@ function MyApp({ Component, pageProps }) {
     },2000)
   },[]);
   return (
+
     <div>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -62,7 +68,10 @@ function MyApp({ Component, pageProps }) {
         {router.pathname !== '/sign_in' && <TopBar />}
         <div className='app_container'>
           {router.pathname !== '/sign_in' && <SideBar />}
+          <ThirdwebWeb3Provider supportedChainIds={supportedChainIds}
+          connectors={connectors}>
           <Component {...pageProps} />
+          </ThirdwebWeb3Provider>
         </div>
       </div>
       

@@ -3,8 +3,10 @@ import Image from "next/image";
 import Button from "../components/Button";
 import styles from "../styles/sign_in.module.css";
 import Link from 'next/link';
+import { useWeb3 } from "@3rdweb/hooks";
 
 export default function Home() {
+  const {address, chainId, connectWallet} = useWeb3()
   return (
     <div className={styles.container}>
       <Head>
@@ -21,6 +23,8 @@ export default function Home() {
           content="invest in startups from all segments or participate by being an early employee"
         />
       </Head>
+  {/* {address ? <div><p>Address: {address}</p><p>ChainId: {chainId}</p></div>: <div><button onClick={() => connectWallet("injected")}>Connect Wallet</button></div>} */}
+
       <div className={styles.logo}>
         <img src="Icons/logo.svg" alt="" />
       </div>
@@ -39,7 +43,7 @@ export default function Home() {
               icon: <img src="/google.svg" alt="" />,
             }}
           /> */}
-          <div className={styles.ssoLogin}>
+          <div className={styles.ssoLogin} onClick={() => connectWallet("injected")}>
             <img src="Icons/metamask.svg" alt="" />
             <p>Continue with MetaMask</p>
           </div>
