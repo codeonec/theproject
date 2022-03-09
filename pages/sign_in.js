@@ -27,10 +27,10 @@ export default function Home() {
       <div className={styles.loginInterface}>
         <div className={styles.banner}>Log in to Uprise</div>
         <div className={styles.sso}>
-          <div className={styles.ssoLogin}>
+          {/* <div className={styles.ssoLogin}>
             <img src="Icons/google.svg" alt="" />
             <p>Continue with Google</p>
-          </div>
+          </div> */}
           {/* <Button
             specs={{
               width: 21,
@@ -40,8 +40,8 @@ export default function Home() {
             }}
           /> */}
           <div className={styles.ssoLogin}>
-            <img src="Icons/apple.svg" alt="" />
-            <p>Continue with Apple</p>
+            <img src="Icons/metamask.svg" alt="" />
+            <p>Continue with MetaMask</p>
           </div>
         </div>
         <p className={styles.or}>OR</p>

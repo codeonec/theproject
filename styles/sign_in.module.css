@@ -1,5 +1,7 @@
 .logo {
-  /* width: 100vw; */
+  width: 100vw;
+  background-color: var(--bg-main);
+  position: fixed;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid var(--border);
@@ -8,6 +10,7 @@
   margin: 0.9375rem;
 }
 .loginInterface {
+  margin-top: 2.75rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -25,7 +28,7 @@
   border-radius: 1.8125rem;
   background-color: var(--bg-secondary);
   width: 21.5rem;
-  height: 2.875rem;
+  /* height: 2.875rem; */
   margin-top: 1.5625rem;
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
