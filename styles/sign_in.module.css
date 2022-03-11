@@ -21,6 +21,9 @@
   font-weight: bold;
   margin: 3rem 0 1.125rem 0;
 }
+.address{
+  margin-top: 1.5625rem;
+}
 .ssoLogin {
   display: flex;
   justify-content: center;
