@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useWeb3 } from "@3rdweb/hooks";
 
 export default function Home() {
-  const {address, chainId, connectWallet} = useWeb3()
+  const {address, chainId, balance, connectWallet} = useWeb3()
   return (
     <div className={styles.container}>
       <Head>
@@ -48,6 +48,7 @@ export default function Home() {
             <p>Continue with MetaMask</p>
           </div>
         </div>
+        <div>{address}</div>
         <p className={styles.or}>OR</p>
         <div className={styles.normalLogin}>
           <div className={styles.field}>
