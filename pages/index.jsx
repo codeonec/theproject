@@ -11,7 +11,7 @@ export default function Home() {
       dollar:"₹",
       image:"/pngs/icon.png",
       revenue:"6 Mn",
-      price:"982.00",
+      price:"982.05",
       valuation:"28 Bn",
       founded:"Founded in 2010 by Mr Keval.",
       likeCount:"69K",
