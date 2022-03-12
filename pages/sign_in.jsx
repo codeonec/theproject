@@ -63,7 +63,7 @@ export default function Home() {
           </div>
           <div className={styles.field}>
             <p>Password</p>
-            <input type="text" placeholder="Password" />
+            <input type="password" placeholder="Password" />
           </div>
           <div className={styles.loginButton}>{signUp ? "Sign up" : "Log in"}</div>
           <div className={styles.signup}>
