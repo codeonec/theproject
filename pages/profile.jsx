@@ -9,6 +9,7 @@ export default function profile() {
             <div className={styles.profilepic}>
             </div>
         </div>
+        <div className={styles.name}></div>
     </div>
   )
 }
