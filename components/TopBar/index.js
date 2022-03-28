@@ -41,13 +41,14 @@ const TopBar = () => {
               height={25}
               width={25}
             />
+            <a href="/profile">
             <Image
               className={styles.cursorPointer}
               src="/Icons/user-profile.svg"
               alt="Account Icon"
               width={25}
               height={25}
-            />
+            /></a>
           </div>
         </div>
       </div>

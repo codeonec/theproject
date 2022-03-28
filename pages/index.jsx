@@ -50,7 +50,7 @@ export default function Home() {
         <div className={styles.title}>Recommended ✨</div>
         
         {company.map((x) => 
-          (<Card
+          (<Card key={x.name}
             dollar={x.dollar}
             image={<img src={x.image}/>}
             revenue={x.revenue}
