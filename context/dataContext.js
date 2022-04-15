@@ -49,6 +49,7 @@ export const DataProvider = ({ children }) => {
         setProjects(prev => {
             return [...prev, project]
         })
+        console.log(project)
     }
 
     return (

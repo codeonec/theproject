@@ -1,6 +1,6 @@
 import styles from "../styles/Button.module.css";
 
-function Button({ specs }) {
+function Button({ specs,onClick }) {
   return (
     <div>
       <style jsx>
@@ -11,7 +11,7 @@ function Button({ specs }) {
           }
         `}
       </style>
-      <button className={`${styles.btn} btn`}>
+      <button className={`${styles.btn} btn`} onClick={onClick}>
         {specs.icon && specs.icon}
         <p className={`${styles.btn_text} btn_text`}>{specs.text}</p>
       </button>
