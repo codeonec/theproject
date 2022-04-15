@@ -7,19 +7,19 @@ import { UseData } from "../context/dataContext";
 import styles from "../styles/index.module.css";
 
 export default function Home() {
-  
-  const {projects} = UseData()
+  const { projects } = UseData();
   return (
     <div className={styles.container}>
       <div className={styles.cards}>
         <div className={styles.title}>Recommended ✨</div>
-        
-        {projects.map((x) => 
-          (<Card key={x.name}
+
+        {projects.map((x) => (
+          <Card
+            key={x.name}
             dollar={x.dollar}
-            image={<img src={x.image}/>}
+            image={<img src={x.image} />}
             revenue={x.revenue}
-            price={x.revenue}
+            price={x.price}
             valuation={x.valuation}
             founded={x.founded}
             likeCount={x.likeCount}
@@ -27,8 +27,8 @@ export default function Home() {
             name={x.name}
             description={x.description}
             moreInfo={x.moreInfo}
-          />)
-        )}
+          />
+        ))}
       </div>
       {/* <div className={styles.listings}></div> */}
       <TopListing />
