@@ -31,10 +31,11 @@ const SideBar = () => {
                 </Link>
                 <Link href="/add">
                     <a className={router.pathname == "/add" ? `${styles.link} ${styles.active}` : `${styles.link}`}>
-                        <Image src="/Icons/add.svg" height="18" width="18" /><div className={styles.text}>&nbsp;&nbsp;&nbsp;Add</div>
+                        <Image src="/Icons/add.svg" height="18" width="18" /><div className={styles.text}>&nbsp;&nbsp;&nbsp;Post Project</div>
                     </a>
                 </Link>
             </div>
+            
         </div>
     )
 }
