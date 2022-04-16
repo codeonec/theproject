@@ -3,9 +3,24 @@
   }
 
 .uprise {
-  margin: 0 9.375rem;
+  overflow: auto;
+  padding: 0.5rem 4rem;
+  padding-bottom: 0;
   max-width: 1000px;
 }
+
+.uprise::-webkit-scrollbar{
+  background: var(--bg-secondary);
+  width: 10px;
+}
+.uprise::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.uprise::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 .title{
   font-size: 2.638rem;
@@ -13,4 +28,52 @@
 
 .span{
   color: var(--green-text);
+}
+
+.developers{
+  display: flex;
+  flex-wrap: wrap;
+}
+.profileCard{
+  margin: 17px;
+  margin-left: 0;
+  width: 200px;
+  background-color: var(--bg-secondary);
+  height: 270px;
+  box-shadow: 2px 0px 0px var(--color-brand);
+  /* border-radius: 8px; */
+}
+.profileCard img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.profileCard img:hover{
+  height: 75%;
+  /* opacity: 0.8; */
+}
+.links{
+  display: flex;
+  justify-content:space-evenly;
+  visibility: hidden;
+  z-index: 0;
+  position: relative;
+  top: -25%;
+  width: 100%;
+  height: 25%;
+  background-color: var(--bg-secondary);
+  transition: top 0.3s ease-in-out;
+  /* transition-delay: 0.3s; */
+}
+.profileCard img:hover + .links{
+  visibility:visible;
+  top: -5px;
+}
+.link{
+  background-color: #555;
+  border-radius: 2px;
+  width: 45px;
+  height: 36px;
+  margin: auto 0;
 }

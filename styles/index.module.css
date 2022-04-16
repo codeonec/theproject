@@ -19,7 +19,7 @@
 
 .cards {
   padding: 20px;
-  padding-right: 0;
+  /* padding-right: 0; */
   /* border-right: 1px solid var(--border); */
 }
 .title {
@@ -43,5 +43,5 @@
   padding-right: 20px;
 }
 .title{
-  border-right: 1px solid var(--border);
+  /* border-right: 1px solid var(--border); */
 }

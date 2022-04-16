@@ -1,5 +1,6 @@
 .container {
   margin: 1.25rem;
+  margin-left: 0;
   height: 50rem;
   max-height: calc(100% - 1.25rem);
   border-radius: 15px 15px 0 0;
