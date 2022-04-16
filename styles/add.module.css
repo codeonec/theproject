@@ -1,0 +1,63 @@
+.container {
+    width: 100%;
+    padding: 20px;
+    overflow-y: scroll;
+  }
+.uprise{
+  width: 80%;
+}
+
+.formElement{
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9375rem;
+  width: 100%;
+
+}
+
+.formElement label {
+  margin: 0.9375rem 0;
+  text-align: start;
+  
+}
+.formElement input {
+  color: var(--text-secondary);
+  padding: 0.9375rem 1.375rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 0.9375rem;
+  border: none;
+  outline: none;
+  background-color: var(--bg-secondary);
+}
+.formElement input::placeholder {
+  color: #ffffff33;
+}
+.formElement textarea {
+  color: var(--text-secondary);
+  padding: 0.9375rem 1.375rem;
+  border-radius: 0.5rem;
+  font-size: 0.9375rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* width: ; */
+  border: none;
+  outline: none;
+  background-color: var(--bg-secondary);
+  resize: none;
+}
+.formElement textarea::placeholder{
+  color: #ffffff33;
+}
+.group{
+  display: flex;
+  gap: 25px;
+}
+.submit{
+  margin-top:30px;
+}
+.title{
+  font-size: 2.638rem;
+}
+.span{
+  color: var(--green-text);
+}

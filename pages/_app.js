@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from "react";
 import TopListing from '../components/TopListing';
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
+import { DataProvider } from '../context/dataContext';
 
 
 const supportedChainIds = [1,4]
@@ -32,52 +33,53 @@ function MyApp({ Component, pageProps }) {
     },2000)
   },[]);
   return (
+    <DataProvider>
+      <div>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link rel="icon" href="Icons/favicon.svg" />
+          <title>Uprise</title>
+          <meta name="description" content="UPRISE.COM" />
+          <meta property="theme-color" content="#000000" />
+          <meta property="og:site_name" content="Uprise.com" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Uprise. Funding next big thing" />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" itemProp="image" content="" />
+          {/* https://uprise-keval9shah.vercel.app/pngs/logo.png */}
+          <meta
+            property="og:description"
+            content="invest in startups from all segments or participate by being an early employee"
+          />
+        </Head>
+        <style jsx>
+            {`
+              .app_container{
+                display: flex;
+                position: relative;
+                height: calc(100vh - 4.0625rem);
+                ${router.pathname !=='/sign_in' && "max-width:1285px;"}
+                margin:0 auto;
+              }
+              .appWrap{
+                height:100vh;
+              }
+            `}
+        </style>
+        <div className="appWrap">
+          {router.pathname !== '/sign_in' && <TopBar />}
+          <div className='app_container'>
+            {router.pathname !== '/sign_in' && <SideBar />}
+            <ThirdwebWeb3Provider supportedChainIds={supportedChainIds}
+            connectors={connectors}>
+            <Component {...pageProps} />
 
-    <div>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="Icons/favicon.svg" />
-        <title>Uprise</title>
-        <meta name="description" content="UPRISE.COM" />
-        <meta property="theme-color" content="#000000" />
-        <meta property="og:site_name" content="Uprise.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Uprise. Funding next big thing" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" itemProp="image" content="" />
-        {/* https://uprise-keval9shah.vercel.app/pngs/logo.png */}
-        <meta
-          property="og:description"
-          content="invest in startups from all segments or participate by being an early employee"
-        />
-      </Head>
-      <style jsx>
-          {`
-            .app_container{
-              display: flex;
-              position: relative;
-              height: calc(100vh - 4.0625rem);
-              ${router.pathname !=='/sign_in' && "max-width:1285px;"}
-              margin:0 auto;
-            }
-            .appWrap{
-              height:100vh;
-            }
-          `}
-      </style>
-      <div className="appWrap">
-        {router.pathname !== '/sign_in' && <TopBar />}
-        <div className='app_container'>
-          {router.pathname !== '/sign_in' && <SideBar />}
-          <ThirdwebWeb3Provider supportedChainIds={supportedChainIds}
-          connectors={connectors}>
-          <Component {...pageProps} />
-
-          </ThirdwebWeb3Provider>
+            </ThirdwebWeb3Provider>
+          </div>
         </div>
+        
       </div>
-      
-    </div>
+    </DataProvider>
   )
 }
 

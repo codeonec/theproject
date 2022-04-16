@@ -2,6 +2,7 @@ import Link from "next/link"
 import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../../styles/SideBar.module.css"
+import Button from "../Button";
 
 const SideBar = () => {
     const router = useRouter()
@@ -28,7 +29,13 @@ const SideBar = () => {
                         <Image src="/Icons/about.svg" height="18" width="18" /><div className={styles.text}>&nbsp;&nbsp;&nbsp;About</div>
                     </a>
                 </Link>
+                <Link href="/add">
+                    <a className={router.pathname == "/add" ? `${styles.link} ${styles.active}` : `${styles.link}`}>
+                        <Image src="/Icons/add.svg" height="18" width="18" /><div className={styles.text}>&nbsp;&nbsp;&nbsp;Post Project</div>
+                    </a>
+                </Link>
             </div>
+            
         </div>
     )
 }
