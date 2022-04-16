@@ -49,21 +49,23 @@ export default function Home() {
       <div className={styles.cards}>
         <div className={styles.title}>Recommended ✨</div>
         
-        {company.map((x) => 
-          (<Card key={x.name}
-            dollar={x.dollar}
-            image={<img src={x.image}/>}
-            revenue={x.revenue}
-            price={x.revenue}
-            valuation={x.valuation}
-            founded={x.founded}
-            likeCount={x.likeCount}
-            percent={x.percent}
-            name={x.name}
-            description={x.description}
-            moreInfo={x.moreInfo}
-          />)
-        )}
+        <div className={styles.innercards}>
+          {company.map((x) =>
+            (<Card key={x.name}
+              dollar={x.dollar}
+              image={<img src={x.image}/>}
+              revenue={x.revenue}
+              price={x.revenue}
+              valuation={x.valuation}
+              founded={x.founded}
+              likeCount={x.likeCount}
+              percent={x.percent}
+              name={x.name}
+              description={x.description}
+              moreInfo={x.moreInfo}
+            />)
+          )}
+        </div>
         {/* <Card
           dollar="₹"
           image={<img src="/pngs/icon.png" />}

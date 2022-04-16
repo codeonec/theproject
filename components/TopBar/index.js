@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../Button";
 import styles from "../../styles/TopBar.module.css"
 
@@ -41,14 +42,14 @@ const TopBar = () => {
               height={25}
               width={25}
             />
-            <a href="/profile">
+            <Link href="/profile"><a>
             <Image
               className={styles.cursorPointer}
               src="/Icons/user-profile.svg"
               alt="Account Icon"
               width={25}
               height={25}
-            /></a>
+            /></a></Link>
           </div>
         </div>
       </div>

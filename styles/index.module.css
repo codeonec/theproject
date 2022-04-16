@@ -19,7 +19,8 @@
 
 .cards {
   padding: 20px;
-  border-right: 1px solid var(--border);
+  padding-right: 0;
+  /* border-right: 1px solid var(--border); */
 }
 .title {
   font-size: 1.0625rem;
@@ -33,4 +34,14 @@
   .container {
     height: calc(100vh - 47.5px);
   }
+}
+
+
+.innercards{
+  padding-bottom: 1.5rem;
+  border-right: 1px solid var(--border);
+  padding-right: 20px;
+}
+.title{
+  border-right: 1px solid var(--border);
 }
