@@ -26,6 +26,7 @@ export default function About() {
         something they want, putting their desires at the top of our priority
         list.
       </p>
+      <h1 className={styles.dev}>Developers</h1>
       <div className={styles.developers}>
           <div className={styles.profileCard}>
               <img src="https://avatars.githubusercontent.com/u/59252995?v=4"></img>

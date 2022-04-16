@@ -6,7 +6,7 @@
   overflow: auto;
   padding: 0.5rem 4rem;
   padding-bottom: 0;
-  max-width: 1000px;
+  max-width: 1050px;
 }
 
 .uprise::-webkit-scrollbar{
@@ -26,6 +26,17 @@
   font-size: 2.638rem;
 }
 
+.dev{
+  font-size: 2.238rem;
+  background:linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  margin-bottom: 0px;
+  background-size: 600% 100%;
+  animation: gradient 6s linear infinite;
+  animation-direction: alternate;
+}
+
 .span{
   color: var(--green-text);
 }
@@ -35,7 +46,7 @@
   flex-wrap: wrap;
 }
 .profileCard{
-  margin: 17px;
+  margin: 27px;
   margin-left: 0;
   width: 200px;
   background-color: var(--bg-secondary);
@@ -43,6 +54,7 @@
   box-shadow: 2px 0px 0px var(--color-brand);
   /* border-radius: 8px; */
 }
+
 .profileCard img{
   width: 100%;
   height: 100%;
@@ -77,3 +89,60 @@
   height: 36px;
   margin: auto 0;
 }
+
+
+
+/* HTML CSS JS 
+
+Result
+Skip Results Iframe
+
+EDIT ON
+
+body {
+margin:0;
+}
+.wrapper {
+width: 100%;
+height: 100%;
+position: absolute;
+
+background-size: 600% 100%;
+animation: gradient 16s linear infinite;
+animation-direction: alternate;
+}*/
+@keyframes gradient {
+0% {background-position: 0%}
+100% {background-position: 100%}
+}
+ 
+/* HTML CSSResult Skip Results Iframe
+EDIT ON
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  height: 50%;
+  width: 50%;
+  background: bisque;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  background: linear-gradient(90deg, purple, green, hotpink);
+  z-index: -1;
+  filter: blur(20px);
+}
+
+
+
+Resources1× 0.5× 0.25×Rerun */
