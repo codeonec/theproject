@@ -3,8 +3,9 @@ import Image from "next/image";
 import Button from "../components/Button";
 import styles from "../styles/sign_in.module.css";
 import Link from 'next/link';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useWeb3 } from "@3rdweb/hooks";
+import Router  from "next/router";
 
 
 export default function Home() {
@@ -12,6 +13,15 @@ export default function Home() {
   const {address, chainId, connectWallet} = useWeb3() 
   // const tokenInst = new web3.eth.Contract(tokenABI, token.address);
   // const balance = await tokenInst.methods.balanceOf(address).call()
+ useEffect(()=>{
+   if(address){
+    Router.push({
+      pathname: '/'
+    })
+   }
+ },[address])
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -31,7 +41,7 @@ export default function Home() {
   {/* {address ? <div><p>Address: {address}</p><p>ChainId: {chainId}</p></div>: <div><button onClick={() => connectWallet("injected")}>Connect Wallet</button></div>} */}
 
       <div className={styles.logo}>
-        <img src="Icons/logo.svg" alt="" />
+        <img src="Icons/logo.svg" alt="hello" />
       </div>
       <div className={styles.loginInterface}>
         <div className={styles.banner}>{signUp ? "Sign Up" : "Log In"} to Uprise</div>
@@ -49,7 +59,7 @@ export default function Home() {
             }}
           /> */}
           {address ? <div className={styles.address}>{address.slice(0,14)+"...."+address.slice(28,42)}</div>:
-          <div className={styles.ssoLogin} onClick={() => connectWallet("injected")}>
+          <div className={styles.ssoLogin} onClick={() =>   connectWallet("injected")    }>
             <img src="Icons/metamask.svg" alt="" />
             <p>Continue with MetaMask</p>
           </div>}
