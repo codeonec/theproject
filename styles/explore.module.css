@@ -1,3 +1,31 @@
 .container {
-    border-right: 1px solid var(--border);
-  }
+  border-right: 1px solid var(--border);
+  max-width: 900px;
+  width: 100%;
+  margin: 40px 50px;
+}
+.align{
+  margin-left: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  /* width: fit-content; */
+}
+.align img{
+  width: 16px;
+  padding-top: 5px;
+  margin-left: 7px;
+}
+.topbarContentInput {
+  line-height: 2.5rem;
+  padding: 0rem 1.5rem;
+  width: 26rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 30px;
+}
+
+.topbarContentInput:focus {
+  outline: none;
+}
