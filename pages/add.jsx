@@ -101,8 +101,8 @@ export default function Add() {
           </div>
 
           <Button
-            className={styles.submit}
             specs={{
+              cls:"submit",
               text: "Submit",
               height: 2.5,
               type: "submit",
