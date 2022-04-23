@@ -11,7 +11,7 @@ function Button({ specs,onClick }) {
           }
         `}
       </style>
-      <button className={`${styles.btn} btn`} onClick={onClick} type={specs.type}>
+      <button className={`${styles.btn} btn ${specs.cls}`} onClick={onClick} type={specs.type}>
         {specs.icon && specs.icon}
         <p className={`${styles.btn_text} btn_text`}>{specs.text}</p>
       </button>

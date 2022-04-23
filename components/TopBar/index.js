@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
-import styles from "../../styles/TopBar.module.css"
+import styles from "../../styles/TopBar.module.css";
+import { useRouter } from 'next/router';
 
 const TopBar = () => {
+  const router = useRouter();
   return (
     <div>
       <div className={styles.topbar}>
@@ -15,11 +17,11 @@ const TopBar = () => {
             height={25}
             width={77.75}
           />
-          <input
+          {router.pathname!=='/explore' && <input
             className={styles.topbarContentInput}
             type="text"
             placeholder="Search Anything"
-          />
+          />}
           <div className={styles.topbarContentRight}>
             <Button
               specs={{
