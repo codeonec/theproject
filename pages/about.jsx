@@ -31,34 +31,58 @@ export default function About() {
           <div className={styles.profileCard}>
               <img src="https://avatars.githubusercontent.com/u/59252995?v=4"></img>
               <div className={styles.links}>
-                  <div className={styles.link}></div>
-                  <div className={styles.link}></div>
-                  <div className={styles.link}></div>
+                <div className={styles.link}>
+                  <img src="/Icons/github.svg"></img>
+                </div>
+                <div className={styles.link}>
+                  <img src="/Icons/twitter.svg"></img>
+                </div>
+                <div className={styles.link}>
+                  <img src="/Icons/linkedin.svg"></img>
+                </div>
               </div>
           </div>
           <div className={styles.profileCard}>
             <img src="https://avatars.githubusercontent.com/u/45474439?v=4"></img>
             <div className={styles.links}>
-                  <div className={styles.link}></div>
-                  <div className={styles.link}></div>
-                  <div className={styles.link}></div>
+              <div className={styles.link}>
+                <img src="/Icons/github.svg"></img>
               </div>
+              <div className={styles.link}>
+                <img src="/Icons/twitter.svg"></img>
+              </div>
+              <div className={styles.link}>
+                <img src="/Icons/linkedin.svg"></img>
+              </div>
+            </div>
           </div>
           <div className={styles.profileCard}>
             <img src="https://avatars.githubusercontent.com/u/50258158?v=4"></img>
             <div className={styles.links}>
-                  <div className={styles.link}></div>
-                  <div className={styles.link}></div>
-                  <div className={styles.link}></div>
+              <div className={styles.link}>
+                <img src="/Icons/github.svg"></img>
               </div>
+              <div className={styles.link}>
+                <img src="/Icons/twitter.svg"></img>
+              </div>
+              <div className={styles.link}>
+              <img src="/Icons/linkedin.svg"></img>
+              </div>
+            </div>
           </div>
           <div className={styles.profileCard}>
             <img src="https://avatars.githubusercontent.com/u/49111661?v=4"></img>
             <div className={styles.links}>
-                  <div className={styles.link}></div>
-                  <div className={styles.link}></div>
-                  <div className={styles.link}></div>
+              <div className={styles.link}>
+                <img src="/Icons/github.svg"></img>
               </div>
+              <div className={styles.link}>
+                <img src="/Icons/twitter.svg"></img>
+              </div>
+              <div className={styles.link}>
+                <img src="/Icons/linkedin.svg"></img>
+              </div>
+            </div>
           </div>
       </div>
     </div>
