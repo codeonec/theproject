@@ -2,25 +2,26 @@ import Head from "next/head";
 import Image from "next/image";
 import Button from "../components/Button";
 import styles from "../styles/sign_in.module.css";
-import Link from 'next/link';
-import { useEffect, useState } from "react";
-import { useWeb3 } from "@3rdweb/hooks";
-import Router  from "next/router";
-
+import Link from "next/link";
+import { useEffect, useState, useContext } from "react";
+// import { useWeb3 } from "@3rdweb/hooks";
+import Router from "next/router";
+import { GlobalContext } from "../context/globalContext";
 
 export default function Home() {
-  const [signUp,setSignUp]=useState(false);
-  const {address, chainId, connectWallet} = useWeb3() 
+  const { connectToWallet } = useContext(GlobalContext);
+
+  const [signUp, setSignUp] = useState(false);
+  // const { address, chainId, connectWallet } = useWeb3();
   // const tokenInst = new web3.eth.Contract(tokenABI, token.address);
   // const balance = await tokenInst.methods.balanceOf(address).call()
- useEffect(()=>{
-   if(address){
-    Router.push({
-      pathname: '/'
-    })
-   }
- },[address])
-
+  // useEffect(() => {
+  //   if (address) {
+  //     Router.push({
+  //       pathname: "/",
+  //     });
+  //   }
+  // }, [address]);
 
   return (
     <div className={styles.container}>
@@ -38,13 +39,15 @@ export default function Home() {
           content="invest in startups from all segments or participate by being an early employee"
         />
       </Head>
-  {/* {address ? <div><p>Address: {address}</p><p>ChainId: {chainId}</p></div>: <div><button onClick={() => connectWallet("injected")}>Connect Wallet</button></div>} */}
+      {/* {address ? <div><p>Address: {address}</p><p>ChainId: {chainId}</p></div>: <div><button onClick={() => connectWallet("injected")}>Connect Wallet</button></div>} */}
 
       <div className={styles.logo}>
         <img src="Icons/logo.svg" alt="hello" />
       </div>
       <div className={styles.loginInterface}>
-        <div className={styles.banner}>{signUp ? "Sign Up" : "Log In"} to Uprise</div>
+        <div className={styles.banner}>
+          {signUp ? "Sign Up" : "Log In"} to Uprise
+        </div>
         <div className={styles.sso}>
           {/* <div className={styles.ssoLogin}>
             <img src="Icons/google.svg" alt="" />
@@ -58,13 +61,20 @@ export default function Home() {
               icon: <img src="/google.svg" alt="" />,
             }}
           /> */}
-          {address ? <div className={styles.address}>{address.slice(0,14)+"...."+address.slice(28,42)}</div>:
-          <div className={styles.ssoLogin} onClick={() =>   connectWallet("injected")    }>
+          {/* ------------------------- */}
+          {/* {address ? (
+            <div className={styles.address}>
+              {address.slice(0, 14) + "...." + address.slice(28, 42)}
+            </div>
+          ) : ( */}
+          <div className={styles.ssoLogin} onClick={() => connectToWallet()}>
             <img src="Icons/metamask.svg" alt="" />
             <p>Continue with MetaMask</p>
-          </div>}
+          </div>
+          {/* )} */}
+          {/* ---------------------------------======= */}
         </div>
-        
+
         <p className={styles.or}>{signUp ? "AND" : "OR"}</p>
         <div className={styles.normalLogin}>
           <div className={styles.field}>
@@ -75,13 +85,17 @@ export default function Home() {
             <p>Password</p>
             <input type="password" placeholder="Password" />
           </div>
-          <div className={styles.loginButton}>{signUp ? "Sign up" : "Log in"}</div>
+          <div className={styles.loginButton}>
+            {signUp ? "Sign up" : "Log in"}
+          </div>
           <div className={styles.signup}>
             {signUp ? "Already have an account?" : "Don't have an account?"}
             <span>
               <Link href="#">
-                <a onClick={()=>setSignUp(prevCheck => !prevCheck)}>{signUp ? "Log In" : "Sign Up"}</a>
-                </Link>
+                <a onClick={() => setSignUp((prevCheck) => !prevCheck)}>
+                  {signUp ? "Log In" : "Sign Up"}
+                </a>
+              </Link>
             </span>
           </div>
         </div>

@@ -3,10 +3,11 @@ import Head from "next/head";
 import SideBar from '../components/SideBar'
 import TopBar from '../components/TopBar'
 import { useRouter } from 'next/router'
-import { useEffect } from "react";
+import { useContext,useEffect } from "react";
 import TopListing from '../components/TopListing';
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 import { DataProvider } from '../context/dataContext';
+import { GlobalProvider, GlobalContext } from '../context/globalContext';
 
 
 const supportedChainIds = [1,4]
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }) {
     },2000)
   },[]);
   return (
+    <GlobalProvider>
     <DataProvider>
       <div>
         <Head>
@@ -80,6 +82,7 @@ function MyApp({ Component, pageProps }) {
         
       </div>
     </DataProvider>
+    </GlobalProvider>
   )
 }
 
