@@ -54,7 +54,6 @@ export const GlobalProvider =({children})=>{
                if(addressArrey.length>0){
                    setCurrentAccount(addressArrey[0])
                    router.push('/')
-
                }else{
                    router.push('/sign_in')
                    setAppStatus('notConnected')
