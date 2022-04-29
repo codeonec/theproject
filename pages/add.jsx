@@ -1,9 +1,10 @@
-import { UseData } from "../context/dataContext";
+import { DataContext, UseData } from "../context/dataContext";
 import styles from "../styles/add.module.css";
 import Button from "../components/Button";
+import { useContext } from "react";
 
 export default function Add() {
-  const { addProject } = UseData();
+  const { addProject } = useContext(DataContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();

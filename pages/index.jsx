@@ -25,7 +25,6 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.cards}>
         <div className={styles.title}>Recommended ✨</div>
-        <button onClick={()=>{Buy()}}>Buy</button>
         {projects.map((x) => (
           <Card
             key={x.name}
@@ -40,6 +39,7 @@ export default function Home() {
             name={x.name}
             description={x.description}
             moreInfo={x.moreInfo}
+            contractAddress={x.contractAddress}
           />
         ))}
       </div>

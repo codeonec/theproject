@@ -32,6 +32,7 @@ export const DataProvider = ({ children }) => {
             percent: -0.78,
             name: "Reliance",
             description: "Reliance Industries Limited is an Indian multinational conglomerate company, headquartered in Mumbai. RIL's diverse businesses include energy, petrochemicals, natural gas, retail, telecommunications, mass media, and textiles.",
+            moreInfo:"https://www.ril.com/",
             contractAddress: '0xfcc31571C6ae3789E000DB27e112e428C636A2cD'
         },
         {
@@ -43,8 +44,8 @@ export const DataProvider = ({ children }) => {
             founded: "Founded in 2010 by Mr Shah.",
             likeCount: "69K",
             percent: 9.12,
-            name: "Berkshire Jeetway",
-            description: "ed on equity and token.",
+            name: "Berkshire Hathway",
+            description: "ed on equity and token. Series A with follow-on and focused on equity and token.",
             contractAddress: '0x5c8D6Ad54Ad218eB16F131d45A7b458d7aC6c04B'
         }
     ])

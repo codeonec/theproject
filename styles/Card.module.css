@@ -135,3 +135,57 @@
         margin-bottom: 10px;
     }
 }
+
+.modal{
+    position: absolute;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modalCard{
+    background: var(--bg-secondary);
+    padding: 16px;
+    width: 450px;
+    border-radius: 15px;
+}
+.submitForm{
+
+    display: flex;
+    flex-direction: column;
+}
+.modalHead{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+.modalInput{
+    padding: 10px 16px;
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(255,255,255 , 0.1);
+    border: 0;
+    background: rgba(255,255,255 , 0.03);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: inherit;
+    margin: 8px 0;
+}
+.modalInput::placeholder{
+    color: rgba(255,255,255 , 0.5);
+}
+.modalInput:focus{
+    box-shadow: 0 0 0 1px var(--color-brand);
+}
+.processingBox{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+    line-height: 0.6;
+}
